@@ -9,11 +9,9 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
+        android:background="#000000"
         android:orientation="vertical"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,28 +19,52 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:background="#4E4E4E"
+            android:orientation="horizontal"
+            android:padding="2dp">
 
             <EditText
                 android:id="@+id/txtSearch"
-                android:layout_width="wrap_content"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:fontFamily="@font/inconsolata"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:autofillHints="" />
 
             <Button
                 android:id="@+id/btnsearch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/search" />
+                android:fontFamily="@font/inconsolata"
+                android:text="@string/search"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
-        <ListView
-            android:id="@+id/lstResult"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/lstResult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:background="#4E4E4E"
+                android:dividerHeight="3dp"
+                android:headerDividersEnabled="true"
+                android:scrollIndicators="right" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

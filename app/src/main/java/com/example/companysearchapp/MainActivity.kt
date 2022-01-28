@@ -6,9 +6,6 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-
 class MainActivity : AppCompatActivity()
 {
 	override fun onCreate(savedInstanceState: Bundle?)
@@ -24,7 +21,8 @@ class MainActivity : AppCompatActivity()
 			Thread {
 				val result = api.getCompagny(query)
 				runOnUiThread {
-					lst.adapter = ArrayAdapter<Compagny>(applicationContext,
+					lst.adapter = ArrayAdapter(
+						applicationContext,
 						android.R.layout.simple_list_item_1,
 						android.R.id.text1,
 						result)
